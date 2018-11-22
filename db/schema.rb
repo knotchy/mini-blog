@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181119085137) do
+ActiveRecord::Schema.define(version: 20181122065838) do
 
   create_table "blogs", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "title",                    null: false
+    t.text     "title",      limit: 65535, null: false
     t.text     "text",       limit: 65535, null: false
     t.text     "image",      limit: 65535
     t.integer  "users_id",                 null: false
