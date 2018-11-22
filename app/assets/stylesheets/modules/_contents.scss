@@ -1,0 +1,27 @@
+.wrapper{
+  .content{
+    background-color: #405050;
+    border-radius: 10px;
+    color: white;
+    padding:10px 100px 10px;
+    margin:30px auto 0;
+    width:950px;
+    &--blog__title{
+      font-size:22px;
+      border-bottom: solid white;
+      text-decoration: bold;
+    }
+    &--blog__text{
+      min-height:120px;
+      font-style:11px;
+      padding-top:5px;
+    }
+    &--blog__date{
+      float:right;
+      display: inline;
+    }
+    &--blog__name{
+      font-style:16px;
+    }
+  }
+}

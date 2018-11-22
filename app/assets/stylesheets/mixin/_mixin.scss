@@ -1,0 +1,11 @@
+@mixin clearfix{
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+@mixin bg-gradient($angle: 180deg, $color: #008040, $amount: 45%) {
+  background: linear-gradient($angle, $color, adjust-hue($color, $amount)) fixed;
+}

@@ -1,6 +1,12 @@
 @import "./reset";
 @import "vender/icono.min.scss";
 @import "config/font";
-// @import "modules/header";
-// @import "modules/comments_area";
-// @import "modules/side_bar";
+@import "mixin/mixin";
+@import "modules/header";
+@import "modules/contents";
+
+body{
+  min-width:100vw;
+  min-height:100vh;
+  @include bg-gradient;
+}
