@@ -2,11 +2,23 @@
   color:white;
 }
 
-h3{font-family: 'Alegreya', serif;
+
+@mixin e_font{
+  font-family: 'Alegreya', serif;
   color:white;
 }
 
-h4,h5,li{
+@mixin j_font{
   font-family: 'Sawarabi Mincho', sans-serif;
   color:white;
 }
+
+h2,h3,h4{
+  @include e_font;
+}
+
+li,h5{
+  @include j_font;
+}
+
+$white:white;
