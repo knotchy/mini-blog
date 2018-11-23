@@ -6,6 +6,7 @@
 @import "modules/contents";
 @import "modules/blog_new";
 
+
 body{
   min-width:100vw;
   min-height:100vh;
@@ -15,7 +16,6 @@ body{
 footer {
   @include boxBase;
   color: white;
-  position: fixed;
   bottom: 0;
   text-align: center;
   width:100vw;
