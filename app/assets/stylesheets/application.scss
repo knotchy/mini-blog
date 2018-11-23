@@ -5,7 +5,7 @@
 @import "modules/header";
 @import "modules/contents";
 @import "modules/blog_new";
-
+@import "modules/user";
 
 body{
   min-width:100vw;
@@ -15,11 +15,11 @@ body{
 
 footer {
   @include boxBase;
-  color: white;
+  color: $white;
   bottom: 0;
   text-align: center;
   width:100vw;
-  background:#00695c;
+  background:$teal_darken-3;
 }
 
 h4.page_title,h5.page_title{
