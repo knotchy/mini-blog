@@ -1,0 +1,26 @@
+.content{
+  &--write__title{
+    text-decoration: bold;
+    border: none;
+  }
+  &--write__text{
+    font-size:16px;
+    padding:10px 0;
+    @include j_font;
+    .write_text{
+      min-height:300px;
+      width:100%;
+      border: none;
+      background: rgba(gray, .7);
+    }
+  }
+}
+
+.post{
+  font-size: 12px;
+  padding:5px;
+  border-radius: 8px;
+  background: rgba(gray, .7);
+  border: none;
+  font-size:18px;
+}

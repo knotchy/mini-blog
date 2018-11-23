@@ -1,0 +1,18 @@
+.wrapper
+  - @blogs.each do |blog|
+    .content
+      %ul
+        %li.content--blog__title
+          = blog.title
+        - if user_signed_in? && current_user.id == blog.user_id
+          = link_to "/blogs/#{blog.id}",method: :delete, class: "edit-btn" do
+            .material-icons delete 削除
+          %a{href: "/blogs/#{blog.id}/edit",method: :get,class: "edit-btn"}
+            .material-icons palette 編集
+        .content--blog__text
+          = simple_format(blog.text)
+        %li.content--blog__date
+          = blog.updated_at.strftime("%Y年%m月%d日 %H:%M")
+        %li.content--blog__name
+          = blog.user.name
+

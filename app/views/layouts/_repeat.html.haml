@@ -1,26 +1,35 @@
 %nav.teal.darken-3{class: "#00695c"}
   .nav-wrapper
-    %a.brand-logo{href: ""}
-      %i.material-icons>
+    %a.brand-logo{href: root_path}
+      %i.material-icons
       .icono-asterisk
       Mini-Blog
       .icono-asterisk
     %ul.right.hide-on-med-and-down
       %li
-        %a{href: ""}
-          %i.material-icons extension LOGIN
-      %li
-        %a{href: ""}
-          %i.material-icons person_add 登  録
-      %li
-        %a{href: ""}
-          %i.material-icons edit 投  稿
-      %li
-        %a{href: ""}
-          %i.material-icons loop 更  新
+        %a{href: root_path}
+          %i.material-icons home ホーム
+      -if user_signed_in?
+        %li
+          %a{href: "/blogs/new"}
+            %i.material-icons edit 投  稿
+        %li
+          %a{href: "/users/user_id"}
+            %i.material-icons person マイページ
+        %li
+          = link_to destroy_user_session_path,method: :delete do
+            %i.material-icons person_outline LOG OUT
+      -else
+        %li
+          %a{href: "/users/sign_up" }
+            %i.material-icons person_add 登  録
+        %li
+          %a{href: new_user_session_path }
+            %i.material-icons extension LOG IN
   .switch
     %label
-      %span.switch_left なんとか
+      %span.switch_left なんも
       %input{type: "checkbox"}
       %span.lever
-      %span.switch_right かんとか
+      %span.switch_right ないよ
+

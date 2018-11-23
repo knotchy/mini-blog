@@ -1,0 +1,13 @@
+.wrapper
+  %h4.page_title
+    Update a blog
+  .content
+    = form_for @blog do |f|
+      = f.label :title
+      .content--write__title
+        = f.text_field :title, value: "#{@blog.title}",class:"write_title"
+      = f.label :text
+      .content--write__text
+        = f.text_area :text, value: "#{@blog.text}",class:"write_text"
+      .material-icons file_upload
+      = f.submit class:"post"

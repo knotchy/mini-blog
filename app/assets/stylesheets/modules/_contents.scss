@@ -1,27 +1,43 @@
 .wrapper{
+    padding-bottom: 30px;
   .content{
     background: rgba(black, .4);
     border-radius: 10px;
-    color: white;
     padding:10px 100px 10px;
     margin:30px auto 0;
     width:950px;
+    box-shadow: 0 0 8px gray;
+    @include j_font;
     &--blog__title{
       font-size:22px;
-      border-bottom: solid white;
-      text-decoration: bold;
+      border-bottom: thin solid ;
+      display: inline;
     }
     &--blog__text{
       min-height:120px;
-      font-style:11px;
+      font-size:16px;
       padding-top:5px;
+      @include e_font;
     }
     &--blog__date{
       float:right;
       display: inline;
     }
     &--blog__name{
-      font-style:16px;
+      font-size:20px;
+    }
+    a.edit-btn{
+      float:right;
+      color:white;
+      margin-right: 5px;
+      padding: 0 5px;
+      border-radius: 5px;
+      background: rgba(gray, .4);
     }
   }
+}
+
+.complete{
+  width:100vw;
+  @include boxBase;
 }
