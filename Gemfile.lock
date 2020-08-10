@@ -38,6 +38,8 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    ancestry (3.0.5)
+      activerecord (>= 3.2.0)
     arel (7.1.4)
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -192,6 +194,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ancestry
   byebug
   coffee-rails (~> 4.2)
   devise
